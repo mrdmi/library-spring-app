@@ -2,21 +2,21 @@ package com.mrdmi.library.models;
 
 import java.util.Objects;
 
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class Book {
 	private int id; 
 	
-	@NotEmpty(message = "Поле \"Название\" должно быть заполнено")
+	@NotBlank(message = "Поле \"Название\" должно быть заполнено")
 	@Size(max = 100, message = "Количество символов ограничено 100")
 	private String title;
 	
-	@NotEmpty(message = "Поле \"Автор\" должно быть заполнено")
+	@NotBlank(message = "Поле \"Автор\" должно быть заполнено")
 	@Size(max = 100, message = "Количество символов ограничено 100")
 	private String author;
 	
-	@NotEmpty(message = "Поле \"Год\" должно быть заполнено")
+	@NotBlank(message = "Поле \"Год\" должно быть заполнено")
 	private String year;
 
 	public Book() {
